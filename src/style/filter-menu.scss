@@ -1,0 +1,48 @@
+.jurisdictionFilterMenu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: $white;
+  z-index: 1000;
+  margin-top: 8px;
+  opacity: 0;
+  //overflow-y: auto;
+  //display: none;
+}
+
+.ani-filterMenu-enter {
+  display: block;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.ani-filterMenu-enter-active {
+  opacity: 1;
+  display: block;
+  transform: translateY(0);
+  transition: all 220ms ease-out;
+}
+
+.ani-filterMenu-enter-done {
+  display: block;
+  opacity: 1;
+}
+
+.ani-filterMenu-exit {
+  opacity: 1;
+  display: block;
+  transform: translateY(0px);
+}
+
+.ani-filterMenu-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 220ms ease-out;
+}
+
+.ani-filterMenu-exit-done {
+  display: none;
+  opacity: 0;
+}
+
+

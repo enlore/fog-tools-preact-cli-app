@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Utopia STD';
+  src: url('/assets/fonts/utopia-std-regular.woff');
+}
+
+h1, h2, h3, .f-h1, .f-h2, .f-h3 { font-family: 'Utopia STD', serif; }
+p, a, span, dd, dt { font-family: 'Utopia STD', serif; }
+button, label, input, select, textarea { font-family: 'Utopia STD', serif; }
+
+@mixin h1 { font-size: 34px; }
+@mixin h2 { @media (min-width: $lg) { font-size: 30px; }  font-size: 24px; }
+@mixin h3 { @media (min-width: $lg) { font-size: 24px; } font-size: 16px; }
+@mixin p { @media (min-width: $lg) { font-size: 16px; } font-size: 14px; }
+@mixin sm { @media (min-width: $lg) { font-size: 13px; } font-size: 12px; }
+
+h1, .f-h1 { @include h1; }
+h2, .f-h2 { @include h2; }
+h3, .f-h3 { @include h3; }
+p, a, span, dd, dt, .f-p { @include p; }
+.f-sm { @include sm; }
+.f-bold { font-weight: bold; }
+
+a { text-decoration: none; color: $black; cursor: pointer; }
+a:hover { border-bottom: 1px solid $mid-blue; }
+a:active { border-bottom: 1px solid $mid-blue; }
+
+.f-center { text-align: center; }

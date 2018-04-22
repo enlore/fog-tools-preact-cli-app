@@ -1,0 +1,210 @@
+.searchScreen {
+
+}
+
+.screenScreen__header {
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.searchPane {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  //background-color: $perrywinkle-two;
+}
+
+.uploadPane {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: $ice-blue;
+  color: $slate;
+}
+
+.uploadPane__title {
+  line-height: 20px;
+}
+
+.uploadPane__control {
+  margin-top: 36px;
+  //padding-top: 24px;
+  //padding-bottom: 24px;
+  max-width: 272px;
+  @include marginAuto;
+  position: relative;
+  border: 2px dashed $perrywinkle-two;
+  height: 74px;
+}
+
+.uploadPane__controlIcon {
+  position: absolute;
+  padding-left: 24px;
+  top: 0;
+  left: 0;
+  width: 51px;
+  height: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+    @include absVertical;
+  }
+}
+
+.uploadPane__controlLabel {
+  position: absolute;
+  top: 0;
+  left: 51px;
+  padding-right: 24px;
+  padding-left: 16px;
+  display: block;
+  height: 100%;
+
+  span {
+    display: block;
+    @include absVertical;
+    font-weight: bold;
+    line-height: 20px;
+  }
+}
+
+.uploadPane__continue {
+  margin-top: 32px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.resultsPane {
+  //background-color: $perrywinkle-two;
+  //padding-top: 32px;
+  padding-bottom: 32px;
+  //padding-left: 8px;
+  //padding-right: 8px;
+}
+
+.resultsPane *:last-child {
+}
+
+.resultsPane__controls {
+  //padding-bottom: 16px;
+  //border-bottom: 2px solid $blue-grey;
+}
+
+.resultsPane__controls > * {
+  border-top: 1px solid $light-grey-two;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  $color: $steel;
+}
+
+.resultsPane__sortSelect {
+  color: $mid-blue;
+}
+
+.resultsPane__sortSelectContainer {
+  height: 46px;
+}
+
+.resultsPane__sortSelectContainer span {
+  line-height: 38px;
+}
+
+.resultsPane__jurisdictionFilterContainer {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.resultsPane__count {
+  height: 46px;
+  color: $slate;
+}
+
+.resultsPane__count span {
+  line-height: 38px;
+}
+
+.searchResults {
+  @include marginAuto;
+}
+
+.searchResult {
+  margin-top: 16px;
+  border: 2px solid $perrywinkle-two;
+  padding: 16px;
+  padding-left: 34px;
+  clear: both;
+  overflow: hidden;
+  position: relative;
+}
+
+.searchResult__fancyBar {
+  width: 8px;
+  height: 100%;
+  max-height: 138px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $perrywinkle-two;
+}
+
+.searchResult__left {
+  @media (min-width: $md) {
+    float: left;
+    width: 66%;
+  }
+}
+
+.searchResult__right {
+  @media (min-width: $md) {
+    float: right;
+    width: 33%;
+  }
+}
+
+.searchResult__title {
+  color: $mid-blue;
+}
+
+.searchResult__body {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.searchResult__citeTitle {
+  color: $slate;
+}
+
+.searchResult__statementTitle {
+  color: $slate;
+}
+
+.searchResult__citedCasesCount {
+  background-color: $pale-grey-two;
+  color: $slate;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  font-size: 15px;
+  padding: 18px 21px;
+  margin-top: 18px;
+  margin-left: -17px;
+  margin-right: -5px;
+}
+
+.searchResult__readMoreLink {
+  color: $mid-blue;
+  display: block;
+  margin-top: 25px;
+}
+
+.searchResult__statement {
+  background-color: $perrywinkle-two;
+  padding: 8px;
+}

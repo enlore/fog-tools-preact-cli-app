@@ -1,0 +1,25 @@
+.searchbar {
+  //@include marginAuto;
+  //overflow: hidden;
+  //clear: both;
+}
+
+.searchbar__input {
+  display: block;
+  height: 40px;
+  width: 100%;
+  border: none;
+  padding: 0 6px;
+  border-left: 6px solid $perrywinkle-two;
+  line-height: 40px;
+}
+
+.searchbar__button {
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  border: none;
+  background-color: $mid-blue;
+  color: $white;
+}
+

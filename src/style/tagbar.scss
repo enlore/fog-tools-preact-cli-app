@@ -1,0 +1,51 @@
+.tagBar {
+  display: inline-block;
+}
+
+.tagBar__emptyButtonContainer {
+  background-color: $pale-grey-two;
+  display: inline-block;
+}
+
+.tagBar__emptyButton {
+  background-color: transparent;
+  border: none;
+  color: $dark;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 18px;
+  padding-right: 18px;
+  cursor: pointer;
+  &:hover, &:active { background-color: darken($pale-grey-two, 20%) }
+}
+
+.tagBar__tags {
+  display: inline-block;
+}
+
+.tagBar__tag {
+  height: 38px;
+  background-color: $pale-grey-two;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: inline-block;
+  margin-left: 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+
+  &:hover, &:active { background-color: darken($pale-grey-two, 20%) }
+}
+
+.tagBar__tagLabel {
+  line-height: 38px;
+  color: $slate;
+  display: inline-block;
+}
+
+.tagBar__tagRemove {
+  line-height: 38px;
+  color: $slate;
+  display: inline-block;
+  margin-left: 8px;
+}
+

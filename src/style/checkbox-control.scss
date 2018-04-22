@@ -1,0 +1,20 @@
+.checkboxControl {
+  height: 32px;
+  cursor: pointer;
+}
+
+.checkboxControl__checkbox {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.checkboxControl__icon {
+  display: inline-block;
+  line-height: 32px;
+}
+
+.checkboxControl__label {
+  line-height: 32px;
+  padding: 4px 0px 4px 8px;
+}
+

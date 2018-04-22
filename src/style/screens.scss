@@ -1,0 +1,16 @@
+.homeScreen { height: 100%; }
+
+.homeCallout {
+  padding-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 500px;
+  @include marginAuto;
+}
+
+.homeCallout__image {
+  display: block;
+  max-width: 100%;
+  margin-top: 48px;
+  @include marginAuto;
+}

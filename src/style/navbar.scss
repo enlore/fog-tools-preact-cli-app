@@ -1,0 +1,65 @@
+.navbar {
+  height: 50px;
+  background-color: $dark;
+}
+
+.navbar__contentWrap {
+  @include contentWrap;
+  clear: both;
+}
+
+.navbar__logoContainer {
+  display: inline-block;
+  width: 80px;
+  float: left;
+}
+
+.navbar__searchContainer {
+  float: left;
+  overflow: hidden;
+  margin-top: 4.5px;
+  width: calc(100% - 80px); // ie 9 check
+}
+
+.navbar__logo {
+  color: $white;
+  line-height: 50px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+//.navbar__search {
+  //display: inline-block;
+  //max-width: 100%;
+//}
+
+.navbar__anchor {
+  display: inline-block;
+  color: $white;
+  padding: 0 8px;
+  line-height: 50px;
+}
+
+.navbar__left {
+  //position: relative;
+  height: 50px;
+  overflow: hidden;
+
+  @media (min-width: $md) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.navbar__right {
+  //position: relative;
+  height: 50px;
+  overflow: hidden;
+  text-align: right;
+
+  @media (min-width: $md) {
+    width: 50%;
+    float: right;
+  }
+}
+
