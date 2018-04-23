@@ -10,13 +10,13 @@ import connector from '../../connector'
 const mobile = true
 
 class NavBar extends Component {
-  render({ showSearch, content: { nav }, hasAuth, auth }) {
+  render({ content: { nav }, hasAuth, auth }) {
     return (
       <nav class="navbar">
         <div class="navbar__contentWrap">
 
           <div class="navbar__logoContainer">
-            <span class="navbar__logo"> BL v </span>
+            <span class="navbar__logo"> Brand </span>
           </div>
 
           <div class="navbar__searchContainer">
@@ -28,9 +28,6 @@ class NavBar extends Component {
               class="navbar__anchor"
               to={ nav.about.href }>{ nav.about.text }</Link>
 
-            <Link
-              class="navbar__anchor"
-              to={ nav.programs.href }>{ nav.programs.text }</Link>
             <Link
               class="navbar__anchor"
               to={ nav.features.href }>{ nav.features.text }</Link>

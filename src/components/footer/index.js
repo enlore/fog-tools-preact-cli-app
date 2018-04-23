@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import connector from '../../connector'
 
 const Footer = ({
-  content: { footer }
+  content: { nav, footer }
 }) => (
   <div class="footer">
     <div class="footer__brand">
-      <h1> {  } </h1>
+      <h1> { footer.headline } </h1>
     </div>
 
     <div class="footer__nav">
@@ -15,10 +15,6 @@ const Footer = ({
           <Link
             class="footer__anchor"
             to={ nav.about.href }>{ nav.about.text }</Link>
-
-          <Link
-            class="footer__anchor"
-            to={ nav.programs.href }>{ nav.programs.text }</Link>
 
           <Link
             class="footer__anchor"

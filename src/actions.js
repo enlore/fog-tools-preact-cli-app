@@ -24,25 +24,6 @@ export function randResults (count: ?number): Array<SearchResult> {
 export default (store: any) => ({
   init (state: State) {
     console.info('hello from init action', state)
-
-    net.get('https://httpbin.org/anything')
-      .then(res => {
-        console.info(res)
-      })
-    .catch(err => {
-    })
-
-    net.get('http://localhost:9000/test_paragraphs/paragraphs/_search', {
-      body: { query: { match: { labels: 'testify' } } }
-    })
-    .then(res => {
-      return res.hits.hits
-    })
-    .then(hits => {
-      console.info(hits)
-
-    })
-    .catch(err => console.warn(err))
   },
 
   auth ({ hasAuth }: { hasAuth: boolean }): {| hasAuth: boolean |} {
