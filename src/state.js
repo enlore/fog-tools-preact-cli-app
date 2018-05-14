@@ -3,60 +3,95 @@ const HAS_AUTH = false
 
 import { randString } from './actions'
 
-export type SearchFilterKey = 'all' | 'active'
-export type SearchResult = string
+// type Case = {
+  // title: string,
+  // text: string
+// }
+
+
+export type SearchFilterKeys = "all" | "TN"
+
+// export only seems to work like so (for types)
+export type SearchResult = {
+  title: string,
+  text: string
+}
 
 export type State = {
   hasAuth: boolean,
+  accessToken: ?string,
+  idToken: ?string,
+  refreshToken: ?string,
+
+  userFirstName: ?string,
+  userLastName: ?string,
+  googleProfileImage: ?string,
+
+  showMobileNav: boolean,
+
   showResults: boolean,
   currentSearchString: string,
+
   currentSearchResults: Array<SearchResult>,
-  resultsFilters: Array<SearchFilterKey>,
-  indexTransitionFired: boolean,
+
+  resultsFilter: SearchFilterKeys,
+  showJurisdictionFilterMenu: boolean,
 }
 
 let state: State = {
   hasAuth: HAS_AUTH,
+
+  accessToken: null,
+  idToken: null,
+  refreshToken: null,
+
+  userFirstName: null,
+  userLastName: null,
+  googleProfileImage: null,
+
+  showMobileNav: false,
   showResults: false,
   currentSearchString: '',
   currentSearchResults: [],
-  resultsFilters: [ 'all' ],
+  resultsFilter: 'all',
 
-  // flow typing is opt-in, so this is fine until the objects type definition
-  // is notated as exclusive
-  // TODO extract to imported module
+  showJurisdictionFilterMenu: false,
+
+  styles: {
+  },
+
   content: {
     nav: {
+      home: { text: 'Home', href: '/' },
       about: { text: 'About', href: '/about' },
+      programs: { text: 'Programs', href: '/programs' },
       features: { text: 'Features', href: '/features' },
       pricing: { text: 'Pricing', href: '/pricing' },
       signup: { text: 'Sign Up / Login', href: '/login' },
       logout: { text: 'Log Out', href: '/logout' }
     },
 
-    footer : {
-      copyright: "© 2018 Brand - All rights reserved. Terms, conditions, features, availability, pricing, fees, service and support options subject to change without notice.",
-      headline: "",
-      tagline: "",
-    },
-
     index: {
       brand: { src: "", alt: "" },
-      headline: 'Hello',
-      tagline: "It's the Home Screen",
+      headline: '',
+      searchPlaceholder: '',
+      tagline: '',
     },
 
     about: {
-      title: ''
-    },
+      title: 'About' },
 
     features: {
-      title: ''
+      title: 'Features'
     },
 
     pricing: {
-      title: '',
+      title: 'Pricing',
     },
+
+    programs: {
+      title: 'Pricing',
+    }
   }
 }
 
