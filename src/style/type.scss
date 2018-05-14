@@ -1,11 +1,11 @@
-@font-face {
-  font-family: 'Utopia STD';
-  src: url('/assets/fonts/utopia-std-regular.woff');
-}
+//@font-face {
+  //font-family: 'fam';
+  //src: url('path');
+//}
 
-h1, h2, h3, .f-h1, .f-h2, .f-h3 { font-family: 'Utopia STD', serif; }
-p, a, span, dd, dt { font-family: 'Utopia STD', serif; }
-button, label, input, select, textarea { font-family: 'Utopia STD', serif; }
+h1, h2, h3, .f-h1, .f-h2, .f-h3 { font-family: sans-serif; }
+p, a, span, dd, dt { font-family: sans-serif; }
+button, label, input, select, textarea { font-family: sans-serif; }
 
 @mixin h1 {
   font-size: 34px;
