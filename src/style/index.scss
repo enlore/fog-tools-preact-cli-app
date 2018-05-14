@@ -10,7 +10,6 @@ $huge: 1200px;
 
 // content areas/screens
 @import 'screens.scss';
-@import 'search.scss';
 
 // components
 @import 'navbar.scss';
@@ -32,6 +31,24 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.app { height: 100%; }
+
+$footerHeight: 336px;
+
+.stickyFooter__contentWrap {
+  min-height: 100%;
+  margin-bottom: -$footerHeight;
+}
+
+.stickyFooter__footer {
+  height: $footerHeight;
+}
+
+.stickyFooter__bumper {
+  height: $footerHeight;
+}
+
 
 .u-block { display: block; }
 .u-nowrap { white-space: nowrap; }
@@ -56,7 +73,7 @@ html, body {
 .footer {
   background-color: $dark;
   color: $white;
-  padding: 42px 20px 23px;
+  padding: 48px 16px;
   //margin-top: 180px;
 }
 
@@ -64,7 +81,7 @@ html, body {
   text-align: center;
 }
 
-.footer__brandLink { color: $white; }
+.footer__brandLink { color: $light; }
 
 .footer__nav nav {
   display: flex;
@@ -82,8 +99,10 @@ html, body {
 }
 
 .footer__copyright {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 16px;
-  margin-top: 63px;
+  margin-top: 24px;
+  @include marginAuto;
+  max-width: 600px;
   text-align: center;
 }

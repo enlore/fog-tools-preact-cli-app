@@ -4,7 +4,7 @@
 //}
 
 h1, h2, h3, .f-h1, .f-h2, .f-h3 { font-family: sans-serif; }
-p, a, span, dd, dt { font-family: sans-serif; }
+p, a, span, dd, dt, div { font-family: sans-serif; }
 button, label, input, select, textarea { font-family: sans-serif; }
 
 @mixin h1 {

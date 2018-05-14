@@ -12,7 +12,7 @@
 
   z-index: 1000;
 
-  border: 2px solid $light-grey-two;
+  border: 2px solid $grey;
   background-color: $white;
   transform: translateY(0) translateX(-50%);
   left: 50%;
@@ -83,7 +83,7 @@
   @media (min-width: $lg) {
     float: left;
     width: 50%;
-    border-left: 2px solid $light-grey-two;
+    border-left: 2px solid $grey;
     padding-left: 16px;
   }
 }

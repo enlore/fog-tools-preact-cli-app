@@ -10,7 +10,7 @@
   width: 100%;
   border: none;
   padding: 0 6px;
-  border-left: 6px solid $perrywinkle-two;
+  border-left: 6px solid lighten($dark, 20%);
   line-height: 40px;
 }
 
@@ -19,7 +19,7 @@
   height: 40px;
   width: 80px;
   border: none;
-  background-color: $mid-blue;
+  background-color: lighten($dark, 20%);
   color: $white;
 }
 
