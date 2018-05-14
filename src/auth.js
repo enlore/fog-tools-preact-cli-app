@@ -1,14 +1,12 @@
-const DOMAIN       = 'fog-haus.auth0.com'
-const CLIENT_ID    = ''
-const REDIRECT_URI = 'http://localhost:8080/auth'
+import constants from './constants'
 
 import auth0 from 'auth0-js'
 
 const auth0Service = new auth0.WebAuth({
-  domain: DOMAIN,
-  clientID: CLIENT_ID,
-  redirectUri: REDIRECT_URI,
-  audience: `https://${DOMAIN}/userinfo`,
+  domain: constants.DOMAIN,
+  clientID: constants.CLIENT_ID,
+  redirectUri: constants.REDIRECT_URI,
+  audience: `https://${constants.DOMAIN}/userinfo`,
   responseType: 'token id_token',
   scope: 'openid profile read:search'
 })

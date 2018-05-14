@@ -1,6 +1,5 @@
 // @flow
-const HAS_AUTH = false
-
+import { HAS_AUTH_IN_DEV } from './constants'
 import { randString } from './actions'
 
 // type Case = {
@@ -39,7 +38,7 @@ export type State = {
 }
 
 let state: State = {
-  hasAuth: HAS_AUTH,
+  hasAuth: HAS_AUTH_IN_DEV,
 
   accessToken: null,
   idToken: null,
