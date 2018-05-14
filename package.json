@@ -2,11 +2,11 @@
   "private": true,
   "name": "fog-tools-preact-cli-app",
   "version": "1.0.0",
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build --template src/app-frame.html",
-    "serve": "preact build --template src/app-frame.html && preact serve",
+    "build": "preact build --template src/app-frame.html --no-prerender",
+    "serve": "preact build --template src/app-frame.html --no-prerender && preact serve",
     "dev": "preact watch --template src/app-frame.html",
     "lint": "eslint src",
     "test": "jest ./tests",
@@ -24,6 +24,8 @@
     "build/*"
   ],
   "devDependencies": {
+    "dotenv": "^5.0.1",
+    "dotenv-webpack": "^1.5.5",
     "eslint": "^4.9.0",
     "eslint-config-synacor": "^2.0.2",
     "flow-bin": "^0.69.0",

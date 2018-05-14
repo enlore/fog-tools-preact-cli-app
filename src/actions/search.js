@@ -2,7 +2,7 @@
 import Promise from 'promise-polyfill'
 import { randString, randResults } from '../util'
 
-import { safeGet } from '../net'
+import { getProtected } from '../net'
 
 export default {
   setSearchString (state: any, currentSearchString: string):

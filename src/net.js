@@ -68,7 +68,14 @@ const get = (url, { query, body, headers } = {}) => {
     .catch(err => (console.error(err), _throw(err)))
 }
 
+const getProtected = _jsonProxy(_authHeaderProxy(get))
+
 export default {
-  get: _jsonProxy(get),
-  safeGet: _jsonProxy(_authHeaderProxy(get))
+  get: _jsonProxy(get)
+}
+
+
+export {
+  get,
+  getProtected
 }
