@@ -13,7 +13,7 @@ export default function (config, env, helpers) {
     writeFileSync('__webpack_env', JSON.stringify(env, null, 2), 'utf8')
   }
 
-  if (process.env.DEV_PROXY_TO) {
+  if (process.env.DEV_PROXY_TO && config.devServer) {
     // https://webpack.js.org/configuration/dev-server/#devserver-proxy
     config.devServer.proxy = { '/api': process.env.DEV_PROXY_TO }
   }
