@@ -1,14 +1,3 @@
-.searchScreen {
-
-}
-
-.screenScreen__header {
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 64px;
-  padding-bottom: 32px;
-}
-
 .searchPane {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -24,48 +13,57 @@
 
 .uploadPane__title {
   line-height: 20px;
+
+  max-width: 500px;
+  @include marginAuto;
+  line-height: 1.4;
 }
 
 .uploadPane__control {
   margin-top: 36px;
+  padding: 16px;
   //padding-top: 24px;
   //padding-bottom: 24px;
   max-width: 272px;
   @include marginAuto;
   position: relative;
   border: 2px dashed $perrywinkle-two;
-  height: 74px;
+  //height: 74px;
 }
 
 .uploadPane__controlIcon {
-  position: absolute;
-  padding-left: 24px;
-  top: 0;
-  left: 0;
-  width: 51px;
+  //position: absolute;
+  //padding-left: 24px;
+  //top: 0;
+  //left: 0;
   height: 100%;
+  @include marginAuto;
 
   img {
     display: block;
+    width: 31px;
     max-width: 100%;
-    @include absVertical;
+    //@include absVertical;
+    @include marginAuto;
   }
 }
 
 .uploadPane__controlLabel {
-  position: absolute;
-  top: 0;
-  left: 51px;
+  //position: absolute;
+  //top: 0;
+  //left: 51px;
   padding-right: 24px;
   padding-left: 16px;
+  padding-top: 16px;
   display: block;
   height: 100%;
 
-  span {
+  div {
     display: block;
-    @include absVertical;
+    //@include absVertical;
     font-weight: bold;
     line-height: 20px;
+    text-align: center;
   }
 }
 

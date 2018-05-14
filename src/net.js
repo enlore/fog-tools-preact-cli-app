@@ -11,6 +11,11 @@ type BodyPick = { body: any, rest: any }
 
 const ENV = process.env.NODE_ENV
 
+// token is access_token via Auth0
+function authHeader (token: string): { Authorization: string } {
+  return { Authorization: `Bearer ${token}` }
+}
+
 // skipping cookies for the moment
 const credentials = ENV === 'development' ? 'include' : 'same-origin'
 
@@ -19,9 +24,26 @@ const credentials = ENV === 'development' ? 'include' : 'same-origin'
   // (url: string, { body, ...rest }: BodyPick = {}) =>
     // f(url, {...rest, body: body ? JSON.stringify(body) : void 0 })
 
+function _authHeaderProxy (f: Function ): Function {
+  return function (url: string, { accessToken, headers = {}, ...rest }) {
+    return f(url, {
+      headers: {
+        ...headers,
+        ...authHeader(accessToken)
+      },
+      ...rest
+    })
+  }
+}
+
 function _jsonProxy (f: Function): Function {
-  return function (url: string, { body, ...boop }: { body: any } = {}) {
-    return f(url, {...boop, body: body ? JSON.stringify(body): void 0 })
+  return function (url: string, { body, ...rest }: { body: any } = {}) {
+    return f(url, {
+      // serialize the body prop if present
+      body: body ? JSON.stringify(body): void 0,
+      // pack everything else on there (headers, etc)
+      ...rest,
+    })
   }
 }
 
@@ -46,4 +68,7 @@ const get = (url, { query, body, headers } = {}) => {
     .catch(err => (console.error(err), _throw(err)))
 }
 
-export default { get: _jsonProxy(get) }
+export default {
+  get: _jsonProxy(get),
+  safeGet: _jsonProxy(_authHeaderProxy(get))
+}

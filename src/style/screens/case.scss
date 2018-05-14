@@ -1,0 +1,273 @@
+.caseOverviewExpand {
+
+}
+
+.ani-caseOverviewExpand-enter {
+
+}
+
+.ani-caseOverviewExpand-enter-active {
+  transition: all 200ms ease-out;
+}
+
+.caseCarousel {
+  background-color: $pale-grey-two;
+  color: $slate;
+  border-bottom: 2px solid $light-blue-grey-two;
+  position: relative;
+  height: 70px;
+}
+
+.caseCarousel__title {
+  font-weight: bold;
+}
+
+.caseCarousel__content {
+  position: absolute;
+  left: 0;
+  height: 70px;
+  right: 55px;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.caseCarousel__left img,
+.caseCarousel__right img {
+  display: block;
+  margin-top: 20px;
+}
+
+.caseCarousel__left,
+.caseCarousel__right {
+  position: absolute;
+  width: 26px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.caseCarousel__left {
+  right: 29px;
+  margin-right: 24px;
+}
+
+.caseCarousel__right {
+  right: 16px;
+}
+
+.collapseControl {
+  border-bottom: 2px solid $light-blue-grey-two;
+  position: relative;
+  overflow: hidden;
+  height: 57px;
+  cursor: pointer;
+  line-height: 57px;
+}
+
+.caseLayoutContainer {
+  overflow: hidden;
+  clear: both;
+}
+
+.caseOverview__collapseControl {
+  height: 57px;
+  overflow: hidden;
+}
+
+@media (min-width: $huge) {
+  .caseOverview__collapseControl { display: none; }
+
+  .caseOverview {
+    float: left;
+    width: 66.666%;
+  }
+
+  .caseCitedCases,
+  .caseSummaries {
+    float: left;
+    width: 33.333%;
+  }
+
+  .caseOverview {
+    border-right: 2px solid $light-blue-grey;
+    transition: all 124ms ease-out;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ani-caseOverview-enter {
+  }
+
+  .ani-caseOverview-exit {
+  }
+
+  .ani-caseOverview-exit-done {
+    border-right: none;
+    float: none;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ani-caseOverview-enter-done {
+  }
+
+  .caseSidebar {
+    height: 100%;
+    transition: transform 124ms ease-out;
+  }
+
+  .ani-caseSidebar-enter-active {
+  }
+
+  .ani-caseSidebar-enter {
+    display: block;
+    transform: translateX(104%);
+  }
+
+  .ani-caseSidebar-enter-done {
+    transform: translateX(0%);
+  }
+
+  .ani-caseSidebar-exit {
+    transform: translateX(104%);
+  }
+
+  .ani-caseSidebar-exit-active {
+  }
+
+  .ani-caseSidebar-exit-done {
+    display: none;
+    transform: translateX(104%);
+  }
+}
+
+.collapseControl__label {
+  display: block;
+  color: $mid-blue;
+  padding-left: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 57px;
+}
+
+.collapseControl__toggle {
+  display: block;
+  position: absolute;
+  width: 57px;
+  height: 47px;
+  right: 0;
+  top: 0;
+}
+
+.collapseControl__toggleIcon {
+  transition: all 160ms ease-out;
+  transform: rotate(0deg);
+  display: block;
+  margin-top: 18px;
+  width: 25px;
+  transition: all 160ms ease-out;
+  transform: rotate(0deg);
+}
+
+.collapseControl__toggleIcon-entered {
+  transform: rotate(180deg);
+}
+
+.caseContent__controls {
+  padding-top: 16px;
+  clear: both;
+  overflow: hidden;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+.caseContent__bookmark {
+  width: 21px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  float: left;
+  cursor: pointer;
+
+  @media (min-width: $huge) {
+    float: right;
+  }
+}
+
+.caseContent__sidebarToggle {
+  display: none;
+  cursor: pointer;
+
+  @media (min-width: $huge) {
+    display: block;
+    float: right;
+    margin-right: 16px;;
+  }
+}
+
+
+.caseContent__header {
+  padding: 16px;
+}
+
+.caseContent__keyPassages {
+  position: relative;
+  background-color: $very-light-blue;
+  padding: 16px 30px 38px 50px;
+  border-top: 2px solid $light-blue-grey-two;
+  border-bottom: 2px solid $light-blue-grey-two;
+}
+
+.caseContent__popBar {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 8px;
+  height: 160px;
+  background-color: $perrywinkle-two;
+}
+
+.caseContent__keyPassagesTitle {
+  color: $dark;
+}
+
+.caseContent__keyPassage {
+  font-style: italic;
+  line-height: 28px;
+  font-size: 17px;
+}
+
+.caseContent__keyPassagesMoreLink {
+  font-size: 20px;
+  color: $mid-blue;
+  border-bottom: 1px solid $mid-blue;
+}
+
+.caseContent__body {
+  padding: 28px 16px 60px;
+  border-bottom: 2px solid $light-blue-grey-two;
+}
+
+.caseContent__body p {
+  font-size: 16px;
+}
+
+.caseSummaries__collapseContent {
+}
+
+.caseSummaries__content {
+  margin-top: 36px;
+  border-left: 8px solid $light-blue-grey-two;
+  padding-left: 29px;
+}
+
+.caseSummaries__title {
+  line-height: 20px;
+}
+
+.caseSummaries__body {
+  line-height: 22px;
+}
+
+

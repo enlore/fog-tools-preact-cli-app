@@ -3,18 +3,22 @@ import { Link } from 'react-router-dom'
 import connector from '../../connector'
 
 const Footer = ({
-  content: { nav, footer }
+  content: { nav, copyright }
 }) => (
   <div class="footer">
     <div class="footer__brand">
-      <h1> { footer.headline } </h1>
+      <h1> BookLawyer </h1>
     </div>
 
     <div class="footer__nav">
-      <nav class="footer__navControl">
+      <nav>
           <Link
             class="footer__anchor"
             to={ nav.about.href }>{ nav.about.text }</Link>
+
+          <Link
+            class="footer__anchor"
+            to={ nav.programs.href }>{ nav.programs.text }</Link>
 
           <Link
             class="footer__anchor"
@@ -27,7 +31,9 @@ const Footer = ({
     </div>
 
     <div class="footer__copyright">
-      { footer.copyright }
+      © 2018 BookLawyer, Inc. All rights reserved.  Terms, conditions, features,
+      availability, pricing, fees, service and support options subject to change
+      without notice.
     </div>
   </div>
 )

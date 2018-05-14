@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import connector from '../../connector'
+// import connector from '../../connector'
 
 function Checkbox ({ val, checked, onChecked, ...props }) {
   return (
@@ -12,11 +12,13 @@ function Checkbox ({ val, checked, onChecked, ...props }) {
       <div class="checkboxControl__checkbox">
         <div class="checkboxControl__icon">
           { checked ?
-              'X'
-            : '+'
+              <img style="transform: rotate(45deg);" src="/assets/plus-add-white.png" />
+            :
+              <img src="/assets/plus-add-white.png" />
           }
         </div>
-        <span class="checkboxControl__label"> { val.label } </span>
+
+        <div class="checkboxControl__label"> { val.label } </div>
       </div>
 
     </div>

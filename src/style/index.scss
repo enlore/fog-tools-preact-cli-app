@@ -17,7 +17,6 @@ $huge: 1200px;
 @import 'search-bar.scss';
 @import 'tagbar.scss';
 @import 'filter-menu.scss';
-@import 'checkbox-control.scss';
 
 * { box-sizing: border-box; }
 
@@ -27,7 +26,7 @@ html, body {
   padding: 0;
   margin: 0;
   color: $dark;
-  background: $white;
+  //background: $white;
   //font-family: 'Comic Sans', arial, sans-serif; // fast and furious eyeball check
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -37,192 +36,37 @@ html, body {
 .u-block { display: block; }
 .u-nowrap { white-space: nowrap; }
 .u-o-hidden { overflow: hidden; }
+.u-responsive { max-width: 100%; display: block; }
+.u-margin-auto { @include marginAuto; }
+.u-floatContainer { overflow: hidden; }
+.u-floatLeft { float: left; }
+.u-floatRight { float: right; }
 
-.app {
-  height: 100%;
-}
+.u-clearFix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+ }
 
 .contentWrap { @include contentWrap; }
-
-.caseOverviewExpand {
-
-}
-
-.ani-caseOverviewExpand-enter {
-
-}
-
-.ani-caseOverviewExpand-enter-active {
-  transition: all 200ms ease-out;
-}
-
-.caseCarousel {
-  background-color: $pale-grey-two;
-  color: $slate;
-  border-bottom: 2px solid $light-blue-grey-two;
-  position: relative;
-  height: 70px;
-}
-
-.caseCarousel__title {
-  font-weight: bold;
-}
-
-.caseCarousel__content {
-  position: absolute;
-  left: 0;
-  height: 70px;
-  right: 55px;
-  padding-top: 16px;
-  padding-left: 16px;
-}
-
-.caseCarousel__left,
-.caseCarousel__right {
-  color: $mid-blue;
-  position: absolute;
-  display: block;
-  width: 26px;
-  height: 13px;
-  line-height: 70px;
-}
-
-.caseCarousel__left {
-  right: 29px;
-}
-
-.caseCarousel__right {
-  right: 16px;
-}
-
-.caseOverview__collapseControl {
-  border-bottom: 2px solid $light-blue-grey-two;
-  position: relative;
-  overflow: hidden;
-  height: 47px;
-}
-
-.caseOverview__collapseLabel {
-  display: block;
-  color: $mid-blue;
-  padding: 16px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 57px;
-}
-
-.caseOverview__toggle {
-  display: block;
-  position: absolute;
-  width: 57px;
-  height: 47px;
-  right: 0;
-  top: 0;
-}
-
-.caseOverview__toggleIcon {
-  transition: all 160ms ease-out;
-  transform: rotate(0deg);
-  display: block;
-  margin-top: 18px;
-  width: 25px;
-  transition: all 160ms ease-out;
-  transform: rotate(0deg);
-}
-
-.caseOverview__toggleIcon-entered {
-  transform: rotate(180deg);
-}
-
-.caseContent__controls {
-  padding-top: 16px;
-}
-
-.caseContent__bookmark {
-  width: 21px;
-  height: 36px;
-  text-align: center;
-  line-height: 36px;
-  padding-left: 21px;
-}
-
-.caseContent__header {
-  padding: 16px;
-}
-
-.caseContent__keyPassages {
-  position: relative;
-  background-color: $very-light-blue;
-  padding: 16px 30px 38px 50px;
-  border-top: 2px solid $light-blue-grey-two;
-  border-bottom: 2px solid $light-blue-grey-two;
-}
-
-.caseContent__popBar {
-  position: absolute;
-  top: 6px;
-  left: 0;
-  width: 8px;
-  height: 160px;
-  background-color: $perrywinkle-two;
-}
-
-.caseContent__keyPassagesTitle {
-  color: $dark;
-}
-
-.caseContent__keyPassage {
-  font-style: italic;
-  line-height: 28px;
-  font-size: 17px;
-}
-
-.caseContent__keyPassagesMoreLink {
-  font-size: 20px;
-  color: $mid-blue;
-  border-bottom: 1px solid $mid-blue;
-}
-
-.caseContent__body {
-  padding: 28px 16px 60px;
-  border-bottom: 2px solid $light-blue-grey-two;
-}
-
-.caseContent__body p {
-  font-size: 16px;
-}
-
-.caseSummaries__collapseContent {
-}
-
-.caseSummaries__content {
-  margin-top: 36px;
-  border-left: 8px solid $light-blue-grey-two;
-  padding-left: 29px;
-}
-
-.caseSummaries__title {
-  line-height: 20px;
-}
-
-.caseSummaries__body {
-  line-height: 22px;
-}
+.contentWrap--narrow { max-width: 600px; }
 
 .footer {
   background-color: $dark;
   color: $white;
   padding: 42px 20px 23px;
-  margin-top: 180px;
+  //margin-top: 180px;
 }
 
 .footer__brand {
   text-align: center;
 }
 
-.footer__nav {
-
+.footer__nav nav {
+  display: flex;
+  justify-content: center;
 }
 
 .footer__anchor {

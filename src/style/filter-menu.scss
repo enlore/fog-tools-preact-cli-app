@@ -1,42 +1,60 @@
 .jurisdictionFilterMenu {
   display: none;
   position: absolute;
-  width: 100%;
-  background-color: $white;
-  z-index: 1000;
-  margin-top: 8px;
   opacity: 0;
+
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 0px;
+
+  padding: 16px;
+  padding-top: 0;
+
+  z-index: 1000;
+
+  border: 2px solid $light-grey-two;
+  background-color: $white;
+  transform: translateY(0) translateX(-50%);
+  left: 50%;
   //overflow-y: auto;
   //display: none;
+
+  @media (min-width: $lg) {
+    clear: both;
+    overflow: hidden;
+    //left: 50%;
+  }
 }
 
 .ani-filterMenu-enter {
   display: block;
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(-20px) translateX(-50%);
+  margin-top: 8px;
 }
 
 .ani-filterMenu-enter-active {
   opacity: 1;
-  display: block;
-  transform: translateY(0);
+  transform: translateY(0) translateX(-50%);
   transition: all 220ms ease-out;
 }
 
 .ani-filterMenu-enter-done {
   display: block;
+  margin-top: 8px;
+  transform: translateY(0) translateX(-50%);
   opacity: 1;
 }
 
 .ani-filterMenu-exit {
   opacity: 1;
   display: block;
-  transform: translateY(0px);
+  transform: translateY(0) translateX(-50%);
 }
 
 .ani-filterMenu-exit-active {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(-20px) translateX(-50%);
   transition: all 220ms ease-out;
 }
 
@@ -45,4 +63,82 @@
   opacity: 0;
 }
 
+.jurisdictionGroup{
+  margin-top: 24px;
+}
 
+.jurisdictionGroup__child {
+  margin-top: 16px;
+  padding-left: 16px;
+}
+
+.jurisdictionFilterMenu__federalGroup {
+  @media (min-width: $lg) {
+    float: left;
+    width: 50%;
+  }
+}
+
+.jurisdictionFilterMenu__stateGroup {
+  @media (min-width: $lg) {
+    float: left;
+    width: 50%;
+    border-left: 2px solid $light-grey-two;
+    padding-left: 16px;
+  }
+}
+
+.jurisdictionCheckbox {
+  height: 32px;
+  cursor: pointer;
+}
+
+.jurisdictionCheckbox__checkbox {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.jurisdictionCheckbox__icon {
+  display: inline-block;
+  line-height: 32px;
+}
+
+.jurisdictionCheckbox__label {
+  line-height: 32px;
+  padding: 4px 0px 4px 8px;
+}
+
+.checkboxControl {
+  margin-bottom: 8px;
+}
+
+.checkboxControl__checkbox {
+  position: relative;
+  height: 26px;
+}
+
+.checkboxControl__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+}
+
+.checkboxControl__icon img {
+  display: block;
+}
+
+.checkboxControl__label {
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  position: absolute;
+  left: 26px;
+  top: 0;
+  padding-left: 8px;
+
+  @media (min-width: $lg) {
+    font-size: 24px;
+  }
+}

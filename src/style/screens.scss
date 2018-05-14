@@ -1,16 +1,190 @@
-.homeScreen { height: 100%; }
+@import 'screens/home.scss';
+@import 'screens/case.scss';
+@import 'screens/login.scss';
 
-.homeCallout {
-  padding-top: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
-  max-width: 500px;
+.studentScreen {
+  overflow: hidden;
+  //position: relative;
+}
+
+.student__intro {
+  position: relative;
+  padding-top: 54px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 170px;
+  overflow: hidden;
+}
+
+.student__headline {
+  margin-right: 50px;
+
+  @media (min-width: $md) {
+    font-size: 64px;
+    line-height: 68px;
+    letter-spacing: -0.7px;
+    max-width: 400px;
+    margin-left: 18px;
+  }
+}
+
+.student__introCopy {
+  @media (min-width: $md) {
+    margin-left: 300px;
+    max-width: 685px;
+  }
+}
+
+.student__introCopy p {
+  font-size: 25px;
+
+  //@media (min-width: $md) {
+    //font-size: 25px;
+  //}
+}
+
+.student--greyBg {
+  background-color: $pale-grey-two;
+}
+
+.student__floatingBook {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  transform: translateX(45%);
+  width: 150px;
+
+  @media (min-width: $md) {
+    right: auto;
+    left: 60px;
+    top: 480px;
+    z-index: 1000;
+  }
+}
+
+.student__dottedBox {
+  width: 192px;
+  height: 192px;
+  background-color: transparent;
+  border-left: 3px dashed $perrywinkle-two;
+  border-bottom: 3px dashed $perrywinkle-two;
+  position: relative;
+  top: -120px;
+  right: -60%;
+
+  @media (min-width: $md) {
+    width: 580px;
+    height: 600px;
+    position: absolute;
+    top: 400px;
+    left: 203px;
+  }
+}
+
+.student__dashedVertical {
+  border-left: 3px dashed $perrywinkle-two;
+  width: 4px;
+  height: 152px;
+  @include marginAuto;
+
+  @media (min-width: $md) {
+    height: 220px;
+  }
+}
+
+.studentHeader {
+  position: relative;
+}
+
+.student__about {
+  //padding-top: 54px;
+  //padding-bottom: 170px;
+  overflow: hidden;
+
+  @media (min-width: $md) {
+    padding-bottom: 0px;
+  }
+}
+
+
+.student__aboutFiligree {
+  position: relative;
+  height: 300px;
+
+  @media (min-width: $md) {
+    height: 700px;
+  }
+}
+
+.student__guyImage {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 282px;
+  max-width: 100%;
+  z-index: -11;
+
+  @media (min-width: $md) {
+    width: 600px;
+    left: 100px;
+    top: 200px;
+  }
+}
+
+.student__ghostBlueSquare {
+  position: absolute;
+  background-color: rgba($very-light-blue, 0.4);
+  height: 232px;
+  top: 126px;
+  left: 70px;
+  width: 340px;
+  z-index: -10;
+
+  @media (min-width: $md) {
+    width: 400px;
+    height: 400px;
+    top: 400px;
+    left: 585px;
+  }
+}
+
+.student__floatingGavel {
+  position: absolute;
+  top: 140px;
+  right: 8px;;
+
+  @media (min-width: $md) {
+    left: 800px;
+    top: 450px;
+    width: 177px;
+  }
+}
+
+.student__aboutCopy {
+  padding-left: 26px;
+  padding-right: 26px;
+  position: relative;
+  top: -70px;
+  max-width: 700px;
   @include marginAuto;
 }
 
-.homeCallout__image {
-  display: block;
-  max-width: 100%;
-  margin-top: 48px;
-  @include marginAuto;
+.student__aboutCopy p {
+  font-size: 25px;
+}
+
+.student__aboutCopy h1 {
+  color: $mid-blue;
+}
+
+.student__about--bighead {
+  padding-top: 252px;
+}
+
+.student__about--nobutt {
+  padding-bottom: 55px;
+}
+
+.signupCTAContainer--nohead {
+  padding-top: 32px;
 }

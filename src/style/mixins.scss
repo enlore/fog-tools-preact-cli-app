@@ -7,18 +7,17 @@
   max-width: 1200px;
   padding-left: 8px;
   padding-right: 8px;
+
   @include marginAuto;
 
   @media (min-width: $lg) {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
-
 @mixin absVertical {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-

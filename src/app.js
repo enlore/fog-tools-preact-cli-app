@@ -28,19 +28,27 @@ import createStore from 'unistore'
 import devtools    from 'unistore/devtools'
 import { Provider, connect } from 'unistore/preact'
 
-import { h, Component } from 'preact';
+import { h, Component } from 'preact'
 
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom'
 
-import Login from './components/login';
+import NavBar from './components/navbar'
+import Footer from './components/footer'
 
-import Home     from './routes/home';
-import About    from './routes/about';
-import Features from './routes/features';
-import Pricing  from './routes/pricing';
-import Profile  from './routes/profile';
+import Home                     from './routes/home'
+import StudentAmbassadorProgram from './routes/student-ambassador'
+import Case                     from './routes/case'
+import Cases                    from './routes/cases'
 
-import actions from './actions'
+import About                    from './routes/about'
+import Programs                 from './routes/programs'
+import Features                 from './routes/features'
+import Pricing                  from './routes/pricing'
+import Profile                  from './routes/profile'
+import AuthLanding              from './routes/auth-landing'
+import Login                    from './routes/login'
+
+import bindActions from './actions'
 
 if (module.hot) {
   require('preact/debug');
@@ -57,23 +65,33 @@ import ProtectedRoute from './components/protected-route'
 
 // on load, say hello to api, get session info, load user profile, etc
 
-const doAction = (store, name, args) => store.action(actions(store)[name])(args)
-doAction(store, 'init')
+const doAction = (store, name, args) => store.action(bindActions(store)[name])(args)
+// doAction(store, 'init')
+console.info(bindActions(store))
 
 class InnerApp extends Component {
   render ({ store }) {
     return (
       <Provider store={store}>
-        <Router>
+        <Router hashtype="hashbang">
           <div class="app">
+            <NavBar />
+
             <Switch>
-              <Route exact    path ="/"             component={Home} />
-              <Route          path ="/about"        component={About} />
-              <ProtectedRoute path ="/features"     component={Features} />
-              <Route          path ="/pricing"      component={Pricing} />
-              <Route          path ="/login"        component={Login} />
+              <Route exact    path ="/"                     component={Home} />
+              <Route          path ="/student-ambassador"   component={StudentAmbassadorProgram} />
+              <Route          path ="/cases"                component={Cases} />
+              <Route          path ="/case/:caseId"         component={Case} />
+
+              <Route          path ="/about"                component={About} />
+              <Route          path ="/programs"             component={Programs} />
+              <Route          path ="/features"             component={Features} />
+              <Route          path ="/pricing"              component={Pricing} />
+              <Route          path ="/login"                component={Login} />
+              <Route          path ="/auth"                 component={AuthLanding} />
             </Switch>
 
+            <Footer />
           </div>
         </Router>
       </Provider>

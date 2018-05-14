@@ -7,21 +7,65 @@ h1, h2, h3, .f-h1, .f-h2, .f-h3 { font-family: 'Utopia STD', serif; }
 p, a, span, dd, dt { font-family: 'Utopia STD', serif; }
 button, label, input, select, textarea { font-family: 'Utopia STD', serif; }
 
-@mixin h1 { font-size: 34px; }
-@mixin h2 { @media (min-width: $lg) { font-size: 30px; }  font-size: 24px; }
-@mixin h3 { @media (min-width: $lg) { font-size: 24px; } font-size: 16px; }
-@mixin p { @media (min-width: $lg) { font-size: 16px; } font-size: 14px; }
-@mixin sm { @media (min-width: $lg) { font-size: 13px; } font-size: 12px; }
+@mixin h1 {
+  font-size: 34px;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  font-weight: 900;
+
+  @media (min-width: $lg) {
+    font-size: 40px;
+  }
+}
+
+@mixin h2 {
+  font-size: 24px;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  font-weight: 900;
+
+  @media (min-width: $lg) {
+    font-size: 30px;
+  }
+}
+
+@mixin h3 {
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  font-weight: 900;
+
+  @media (min-width: $lg) {
+    font-size: 25px;
+  }
+}
+
+@mixin p {
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+
+  @media (min-width: $lg) {
+    font-size: 17px;
+  }
+}
+
+@mixin f-lg { @media (min-width: $lg) { font-size: 20px; } font-size: 17px; }
+@mixin f-sm { @media (min-width: $lg) { font-size: 13px; } font-size: 12px; }
+@mixin f-pop { font-size: 2em; }
+
+.f-sm { @include f-sm; }
+.f-lg { @include f-lg; }
 
 h1, .f-h1 { @include h1; }
 h2, .f-h2 { @include h2; }
 h3, .f-h3 { @include h3; }
 p, a, span, dd, dt, .f-p { @include p; }
-.f-sm { @include sm; }
+h1.f-pop { font-size: 64px; line-height: 68px; letter-spacing: -0.7px; }
 .f-bold { font-weight: bold; }
 
 a { text-decoration: none; color: $black; cursor: pointer; }
-a:hover { border-bottom: 1px solid $mid-blue; }
-a:active { border-bottom: 1px solid $mid-blue; }
+//a:hover { border-bottom: 1px solid $mid-blue; }
+//a:active { border-bottom: 1px solid $mid-blue; }
 
 .f-center { text-align: center; }
