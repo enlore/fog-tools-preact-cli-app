@@ -22,9 +22,9 @@ class NavBar extends Component {
     return (
       <nav class="navbar">
         <div class="navbar__contentWrap u-floatContainer">
-          <div class="navbar__logoContainer u-floatLeft" onClick={ toggleShowMobileNav }>
-            <div class="navbar__logo navbar__logo--sm"> BL </div>
-            <div class="navbar__logo navbar__logo--lg"> BookLawyer </div>
+          <div class="navbar__logoContainer u-floatLeft" onClick={ ev => { toggleShowMobileNav() } }>
+            <div class="navbar__logo navbar__logo--sm"> Brnd </div>
+            <div class="navbar__logo navbar__logo--lg"> The Brand </div>
           </div>
 
           <div class="navbar__searchContainer u-floatLeft">
@@ -50,7 +50,7 @@ class NavBar extends Component {
           <div class="navbar__menuMask" onClick={ hideMobileNav }>
             <div class="navbar__menu">
               <div class="navbar__mobileToggleControl" onClick={ toggleShowMobileNav }>
-                BookLawyer
+                The Brand
               </div>
 
               <Link
@@ -58,26 +58,27 @@ class NavBar extends Component {
                 onClick={ hideMobileNav }
                 to={ nav.home.href }>{ nav.home.text }</Link>
 
-              {/*
               <Link
                 class="navbar__anchor"
                 to={ nav.about.href }>{ nav.about.text }</Link>
-              */}
 
-              {/*
               <Link
                 class="navbar__anchor"
-                to={ nav.programs.href }>{ nav.programs.text }</Link>
-              */}
+                to={ nav.features.href }>{ nav.features.text }</Link>
+
+              <Link
+                class="navbar__anchor"
+                to={ nav.pricing.href }>{ nav.pricing.text }</Link>
 
               { hasAuth ?
                   <a
                     class="navbar__anchor"
                     style={ { cursor: 'pointer' } }
                     onClick={ auth } to={ nav.logout.href }>{ nav.logout.text }</a>
-                  : <Link
+                  :
+                  <Link
                     class="navbar__anchor"
-                to={ nav.signup.href }>{ nav.signup.text }</Link>
+                    to={ nav.signup.href }>{ nav.signup.text }</Link>
               }
             </div>
           </div>

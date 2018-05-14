@@ -7,7 +7,9 @@ const Footer = ({
 }) => (
   <div class="footer">
     <div class="footer__brand">
-      <h1> BookLawyer </h1>
+      <Link to="/">
+        <h1> The Brand </h1>
+      </Link>
     </div>
 
     <div class="footer__nav">
@@ -18,20 +20,16 @@ const Footer = ({
 
           <Link
             class="footer__anchor"
-            to={ nav.programs.href }>{ nav.programs.text }</Link>
-
-          <Link
-            class="footer__anchor"
             to={ nav.features.href }>{ nav.features.text }</Link>
 
           <Link
             class="footer__anchor"
-            to={ nav.features.href }>{ nav.features.text }</Link>
+            to={ nav.pricing.href }>{ nav.pricing.text }</Link>
       </nav>
     </div>
 
     <div class="footer__copyright">
-      © 2018 BookLawyer, Inc. All rights reserved.  Terms, conditions, features,
+      © 2018 The Brand, Inc. All rights reserved.  Terms, conditions, features,
       availability, pricing, fees, service and support options subject to change
       without notice.
     </div>

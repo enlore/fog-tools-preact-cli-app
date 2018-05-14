@@ -64,7 +64,7 @@ let state: State = {
     nav: {
       home: { text: 'Home', href: '/' },
       about: { text: 'About', href: '/about' },
-      programs: { text: 'Programs', href: '/programs' },
+      profile: { text: 'Programs', href: '/profile' },
       features: { text: 'Features', href: '/features' },
       pricing: { text: 'Pricing', href: '/pricing' },
       signup: { text: 'Sign Up / Login', href: '/login' },
@@ -89,8 +89,8 @@ let state: State = {
       title: 'Pricing',
     },
 
-    programs: {
-      title: 'Pricing',
+    profile: {
+      title: 'User Profile',
     }
   }
 }

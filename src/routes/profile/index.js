@@ -1,13 +1,14 @@
 import { h, Component } from 'preact';
-import style from './style';
 import connector from '../../connector'
 
-const Pricing = ({
-    content: { pricing }
-  }) => (
+const Profile = ({
+  content: { profile }
+}) => (
+  <section class="contentWrap">
     <div>
-      <h1> { pricing.title } </h1>
+      <h1> { profile.title } </h1>
     </div>
+  </section>
 )
 
-export default connector('content', Pricing)
+export default connector('content', Profile)

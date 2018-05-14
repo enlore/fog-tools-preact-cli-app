@@ -1,14 +1,14 @@
 import { h, Component } from 'preact';
-import style from './style';
 import connector from '../../connector'
-
 
 const Features = ({
     content: { features },
   }) => (
-    <div>
-      <h1> { features.title } </h1>
+    <section>
+      <div class="contentWrap">
+        <h1> { features.title } </h1>
     </div>
+    </section>
 )
 
 export default connector('content', Features)

@@ -36,12 +36,7 @@ import NavBar from './components/navbar'
 import Footer from './components/footer'
 
 import Home                     from './routes/home'
-import StudentAmbassadorProgram from './routes/student-ambassador'
-import Case                     from './routes/case'
-import Cases                    from './routes/cases'
-
 import About                    from './routes/about'
-import Programs                 from './routes/programs'
 import Features                 from './routes/features'
 import Pricing                  from './routes/pricing'
 import Profile                  from './routes/profile'
@@ -79,15 +74,11 @@ class InnerApp extends Component {
 
             <Switch>
               <Route exact    path ="/"                     component={Home} />
-              <Route          path ="/student-ambassador"   component={StudentAmbassadorProgram} />
-              <Route          path ="/cases"                component={Cases} />
-              <Route          path ="/case/:caseId"         component={Case} />
-
               <Route          path ="/about"                component={About} />
-              <Route          path ="/programs"             component={Programs} />
               <Route          path ="/features"             component={Features} />
               <Route          path ="/pricing"              component={Pricing} />
               <Route          path ="/login"                component={Login} />
+              <Route          path ="/profile"              component={Profile} />
               <Route          path ="/auth"                 component={AuthLanding} />
             </Switch>
 
