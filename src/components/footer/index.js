@@ -7,7 +7,7 @@ const Footer = ({
 }) => (
   <div class="footer">
     <div class="footer__brand">
-      <Link to="/">
+      <Link class="footer__brandLink" to="/">
         <h1> The Brand </h1>
       </Link>
     </div>
@@ -29,8 +29,8 @@ const Footer = ({
     </div>
 
     <div class="footer__copyright">
-      © 2018 The Brand, Inc. All rights reserved.  Terms, conditions, features,
-      availability, pricing, fees, service and support options subject to change
+      © { new Date().getFullYear() } The Brand, Inc. All rights reserved.  Terms, conditions, features,
+      availability, pricing, fees, service, and support options subject to change
       without notice.
     </div>
   </div>

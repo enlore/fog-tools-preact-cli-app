@@ -70,19 +70,23 @@ class InnerApp extends Component {
       <Provider store={store}>
         <Router hashtype="hashbang">
           <div class="app">
-            <NavBar />
+            <div class="stickyFooter__contentWrap">
+              <NavBar />
 
-            <Switch>
-              <Route exact    path ="/"                     component={Home} />
-              <Route          path ="/about"                component={About} />
-              <Route          path ="/features"             component={Features} />
-              <Route          path ="/pricing"              component={Pricing} />
-              <Route          path ="/login"                component={Login} />
-              <Route          path ="/profile"              component={Profile} />
-              <Route          path ="/auth"                 component={AuthLanding} />
-            </Switch>
+              <Switch>
+                <Route exact    path ="/"                     component={Home} />
+                <Route          path ="/about"                component={About} />
+                <Route          path ="/features"             component={Features} />
+                <Route          path ="/pricing"              component={Pricing} />
+                <Route          path ="/login"                component={Login} />
+                <Route          path ="/profile"              component={Profile} />
+                <Route          path ="/auth"                 component={AuthLanding} />
+              </Switch>
 
-            <Footer />
+              <div class="stickyFooter__bumper"></div>
+            </div>
+
+            <Footer class="stickyFooter__footer"/>
           </div>
         </Router>
       </Provider>
