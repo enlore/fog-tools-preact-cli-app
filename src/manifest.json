@@ -1,6 +1,6 @@
 {
-  "name": "fog-booklawyer-stub",
-  "short_name": "fog-booklawyer-stub",
+  "name": "fog-tools-preact-cli-app-stub",
+  "short_name": "fog-tools-preact-cli-app-stub",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
