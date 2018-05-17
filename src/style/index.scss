@@ -52,14 +52,14 @@ $footerHeight: 336px;
 
 .u__block { display: block; }
 .u__nowrap { white-space: nowrap; }
-.u-o-hidden { overflow: hidden; }
-.u-responsive { max-width: 100%; display: block; }
-.u-margin-auto { @include marginAuto; }
-.u-floatContainer { overflow: hidden; }
-.u-floatLeft { float: left; }
-.u-floatRight { float: right; }
+.u__o-hidden { overflow: hidden; }
+.u__responsive { max-width: 100%; display: block; }
+.u__margin-auto { @include marginAuto; }
+.u__floatContainer { overflow: hidden; }
+.u__floatLeft { float: left; }
+.u__floatRight { float: right; }
 
-.u-clearFix:after {
+.u__clearFix:after {
   content: " ";
   visibility: hidden;
   display: block;

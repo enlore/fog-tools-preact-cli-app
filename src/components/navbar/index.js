@@ -21,17 +21,17 @@ class NavBar extends Component {
   }) {
     return (
       <nav class="navbar">
-        <div class="navbar__contentWrap u-floatContainer">
-          <div class="navbar__logoContainer u-floatLeft" onClick={ ev => { toggleShowMobileNav() } }>
+        <div class="navbar__contentWrap u__floatContainer">
+          <div class="navbar__logoContainer u__floatLeft" onClick={ ev => { toggleShowMobileNav() } }>
             <div class="navbar__logo navbar__logo--sm"> Brnd </div>
             <div class="navbar__logo navbar__logo--lg"> The Brand </div>
           </div>
 
-          <div class="navbar__searchContainer u-floatLeft">
+          <div class="navbar__searchContainer u__floatLeft">
             <SearchBar class="navbar__search" placeholder="Search cases, statutes, and more"/>
           </div>
 
-          <div class="navbar__links u-floatRight">
+          <div class="navbar__links u__floatRight">
             <Link class="navbar__topnavAnchor" to={ nav.features.href }> { nav.features.text } </Link>
             <Link class="navbar__topnavAnchor" to={ nav.about.href }> { nav.about.text } </Link>
             <Link class="navbar__topnavAnchor" to={ nav.pricing.href }> { nav.pricing.text } </Link>

@@ -82,7 +82,7 @@ const Cases = ({
           </div>
 
           <div class="resultsPane__jurisdictionFilterContainer">
-            <div class="u-o-hidden">
+            <div class="u__o-hidden">
               <span class="cc-steel"> Jurisdiction: </span>
 
               <div class="tagBar">

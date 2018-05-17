@@ -72,14 +72,14 @@
   padding-left: 16px;
 }
 
-.jurisdictionFilterMenu__federalGroup {
+.jurisdictionFilterMenu-federalGroup {
   @media (min-width: $lg) {
     float: left;
     width: 50%;
   }
 }
 
-.jurisdictionFilterMenu__stateGroup {
+.jurisdictionFilterMenu-stateGroup {
   @media (min-width: $lg) {
     float: left;
     width: 50%;
