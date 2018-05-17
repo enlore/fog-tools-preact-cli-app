@@ -1,17 +1,15 @@
-import constants from './constants'
+import { DOMAIN, CLIENT_ID, REDIRECT_URI, AUDIENCE, RESPONSE_TYPE, SCOPE } from './constants'
 
 import auth0 from 'auth0-js'
 
 const auth0Service = new auth0.WebAuth({
-  domain: constants.DOMAIN,
-  clientID: constants.CLIENT_ID,
-  redirectUri: constants.REDIRECT_URI,
-  audience: `https://${constants.DOMAIN}/userinfo`,
-  responseType: 'token id_token',
-  scope: 'openid profile read:search'
+  domain: DOMAIN,
+  clientID: CLIENT_ID,
+  redirectUri: REDIRECT_URI,
+  audience: AUDIENCE,
+  responseType: RESPONSE_TYPE,
+  scope: SCOPE
 })
-
-console.info(auth0Service)
 
 function login () {
   auth0Service.authorize()
@@ -30,19 +28,29 @@ function parseHash () {
     })
   })
 }
+function getUserProfile (accessToken, userId) {
+  return new Promise((res, rej) => {
+    const userService = new auth0.Management({
+      domain: DOMAIN,
+      token: accessToken
+    })
 
-    // auth0Service.client.userInfo(result.accessToken, (err, profile) => {
+    userService.getUser(userId, (err, userProfile) => {
+      if (err) rej(err)
+      else res(userProfile)
+    })
+    // auth0Service.client.userInfo(accessToken, (err, profile) => {
       // console.info(err, profile)
-
-      // if (err) return cb(err)
-
-      // cb(profile.auth_token)
+      // if (err) rej(err)
+      // else res(profile)
     // })
-  // })
+  })
+}
 
 export default {
   login,
-  parseHash
+  parseHash,
+  getUserProfile
 }
 
 // post signup payload from auth0
