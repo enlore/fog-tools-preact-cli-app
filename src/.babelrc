@@ -1,5 +1,6 @@
 {
-    "presets": [ 
-        ["preact-cli/babel", { "modules": "commonjs" }]
+    "presets": [
+        "flow",
+        [ "preact-cli/babel", { "modules": "commonjs" } ]
     ]
 }
