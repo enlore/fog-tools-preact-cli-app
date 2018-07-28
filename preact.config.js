@@ -40,6 +40,16 @@ export default function (config, env, helpers) {
 
   config.plugins.push(dotenv)
 
+  // babel plugins section
+  let { rule } = helpers.getLoadersByName(config, 'babel-loader')[0];
+  let babelConfig = rule.options;
+
+  babelConfig.plugins.push('babel-plugin-styled-components')
+
+  // babelConfig.env = {
+    // // ...some settings...
+  // }
+
   preactCliFlow(config);
 
   return config
